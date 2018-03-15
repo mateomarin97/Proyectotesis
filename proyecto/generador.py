@@ -139,7 +139,7 @@ def rotaciontotal(stack,a1,a2,a3,contador):
     stack=planos2inv(stack)
     #Ahora guardamos cada una de las imagenes se stack
     for i in range(len(stack)):
-        np.savetxt("./"+str(contador)+"/"+str(i)+".tif",stack[i])
+        stack[i].save("./"+str(contador)+"/"+str(i+1)+".tif")
     contador=contador+1
     return contador
 
